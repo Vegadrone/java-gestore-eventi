@@ -31,8 +31,8 @@ public class ProgramEvents {
 		events.clear();
 	}
 	
-	public void getNumberOfEventsInProgram() {
-		events.size();
+	public int getNumberOfEventsInProgram() {
+		return events.size();
 	}
 	
 	public List <Event> getEventsInCertainDate( LocalDate date) {
@@ -64,7 +64,6 @@ public class ProgramEvents {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return getListEventsFromProgramByDate();
 	}
 

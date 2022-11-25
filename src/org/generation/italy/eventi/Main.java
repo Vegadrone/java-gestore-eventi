@@ -1,6 +1,9 @@
 package org.generation.italy.eventi;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -80,17 +83,41 @@ public class Main {
 		
 		try {
 			e1= new Event("Gino e l'accendino", LocalDate.parse("2025-09-15"), 100);
-			e2= new Event("Franco e il suo gruppo stanco", LocalDate.parse("2023-12-12"), 150);
-			e3= new Event("Noodles of Wooden Cuddles ", LocalDate.parse("2029-11-23"), 100);
+			e2= new Event("Franco e il suo gruppo stanco", LocalDate.parse("2025-12-12"), 150);
+			e3= new Event("Noodles of Wooden Cuddles ", LocalDate.parse("2025-12-12"), 100);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		ProgramEvents progEv1 = new ProgramEvents("Can-ora: Manifestazione di musica da cani \n");		progEv1.addEventToProgram(e1);
+		ProgramEvents progEv1 = new ProgramEvents("Can-ora: Manifestazione di musica da cani \n");		
+		
+		progEv1.addEventToProgram(e1);
 		progEv1.addEventToProgram(e2);
 		progEv1.addEventToProgram(e3);
 		
 		System.out.println(progEv1);
+		
+		List <Event> december12thDateList = progEv1.getEventsInCertainDate(LocalDate.parse("2025-12-12"));
+		
+		int eventCount = december12thDateList.size();
+		
+		System.out.println("Ci sono"  + " " + eventCount + " " + "eventi presenti in questa data: " +
+				"\n");
+		
+		for(Event date : december12thDateList) {
+			Event decemberDate = date;
+			System.out.println(decemberDate);
+		}
+		
+		
+		System.out.println("--------------------------------------------------------------------");
+		
+		System.out.println("Numero eventi presenti: " + progEv1.getNumberOfEventsInProgram());
+		progEv1.clearProgramEventsList();
+		System.out.println("Eventi rimasti: " + progEv1.getNumberOfEventsInProgram());
+		
+		
+		
 		
 	}
 }
