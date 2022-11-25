@@ -1,6 +1,8 @@
 package org.generation.italy.eventi;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -77,47 +79,55 @@ public class Main {
 		
 		// Test milestone 3
 		
-		Event e1 = null;
-		Event e2 = null;
-		Event e3 = null;
+//		Event e1 = null;
+//		Event e2 = null;
+//		Event e3 = null;
+//		
+//		try {
+//			e1= new Event("Gino e l'accendino", LocalDate.parse("2025-09-15"), 100);
+//			e2= new Event("Franco e il suo gruppo stanco", LocalDate.parse("2025-12-12"), 150);
+//			e3= new Event("Noodles of Wooden Cuddles ", LocalDate.parse("2025-12-12"), 100);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		ProgramEvents progEv1 = new ProgramEvents("Can-ora: Manifestazione di musica da cani \n");		
+//		
+//		progEv1.addEventToProgram(e1);
+//		progEv1.addEventToProgram(e2);
+//		progEv1.addEventToProgram(e3);
+//		
+//		System.out.println(progEv1);
+//		
+//		List <Event> december12thDateList = progEv1.getEventsInCertainDate(LocalDate.parse("2025-12-12"));
+//		
+//		int eventCount = december12thDateList.size();
+//		
+//		System.out.println("Ci sono"  + " " + eventCount + " " + "eventi presenti in questa data: " +
+//				"\n");
+//		
+//		for(Event date : december12thDateList) {
+//			Event decemberDate = date;
+//			System.out.println(decemberDate);
+//		}
+//		
+//		
+//		System.out.println("--------------------------------------------------------------------");
+//		
+//		System.out.println("Numero eventi presenti: " + progEv1.getNumberOfEventsInProgram());
+//		progEv1.clearProgramEventsList();
+//		System.out.println("Eventi rimasti: " + progEv1.getNumberOfEventsInProgram());
+		
+		
+		Concert c1 = null;
 		
 		try {
-			e1= new Event("Gino e l'accendino", LocalDate.parse("2025-09-15"), 100);
-			e2= new Event("Franco e il suo gruppo stanco", LocalDate.parse("2025-12-12"), 150);
-			e3= new Event("Noodles of Wooden Cuddles ", LocalDate.parse("2025-12-12"), 100);
+			c1= new Concert("Elio e le Storie Tese in concerto",LocalDate.parse("2023-12-12"), 500, LocalTime.parse("19:00"), BigDecimal.valueOf(35.50));
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		ProgramEvents progEv1 = new ProgramEvents("Can-ora: Manifestazione di musica da cani \n");		
-		
-		progEv1.addEventToProgram(e1);
-		progEv1.addEventToProgram(e2);
-		progEv1.addEventToProgram(e3);
-		
-		System.out.println(progEv1);
-		
-		List <Event> december12thDateList = progEv1.getEventsInCertainDate(LocalDate.parse("2025-12-12"));
-		
-		int eventCount = december12thDateList.size();
-		
-		System.out.println("Ci sono"  + " " + eventCount + " " + "eventi presenti in questa data: " +
-				"\n");
-		
-		for(Event date : december12thDateList) {
-			Event decemberDate = date;
-			System.out.println(decemberDate);
-		}
-		
-		
-		System.out.println("--------------------------------------------------------------------");
-		
-		System.out.println("Numero eventi presenti: " + progEv1.getNumberOfEventsInProgram());
-		progEv1.clearProgramEventsList();
-		System.out.println("Eventi rimasti: " + progEv1.getNumberOfEventsInProgram());
-		
-		
-		
-		
+		System.out.println(c1);
 	}
 }
