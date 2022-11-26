@@ -65,6 +65,14 @@ public class Event {
 	}
 	
 	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Event) {
+			Event e = (Event) obj;
+			return e.getTitle().equals(getTitle()) && e.getDate().equals(getDate());
+		}
+		return false;
+	}
+	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
 		return getDate() + " - " + getTitle();
